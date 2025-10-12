@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am an undergraduate student at the School of Mathematics and Computer Science at Nanchang University. My research interests focus on Computer Vision, Cross-modal Retrieval, Multi-modal Pre-training.
+Hi! I'm Zeyu Zhang (张泽渝), currently an undergraduate student at the School of Mathematics and Computer Science at Nanchang University. My research interests focus on Computer Vision, Cross-modal Retrieval, Multi-modal Pre-training.
 
 # 🔥 News
 - *2025.10*: &nbsp;🎉🎉 WaveNet-SF: A hybrid network for retinal disease detection based on wavelet transform in spatial-frequency domain was accepted by ***Neural Networks*** (CCF B)
