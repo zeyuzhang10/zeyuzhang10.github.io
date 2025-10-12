@@ -20,9 +20,9 @@ redirect_from:
 Hi! I'm Zeyu Zhang (张泽渝), currently an undergraduate student at the School of Mathematics and Computer Science at Nanchang University. My research interests focus on Computer Vision, Cross-modal Retrieval, Multi-modal Pre-training.
 
 # 🔥 News
-- *2025.10*: &nbsp;🎉🎉 WaveNet-SF: A hybrid network for retinal disease detection based on wavelet transform in spatial-frequency domain was accepted by ***Neural Networks*** (CCF B)
-- *2025.06*: &nbsp;🎉🎉 VehicleMAE: View-asymmetry Mutual Learning for Vehicle Re-identification Pre-training via Masked AutoEncoders was accepted by ***ICCV 2025*** (CCF A)
-- *2025.04*: &nbsp;🎉🎉 EyeTransGAN: End-to-End Generation of Corneal Fluorescein Staining Images from Anterior Segment Photography with Unsupervised Semantic Consistency was accepted by ***IJCNN 2025*** (CCF C)
+- *2025.10*: &nbsp;🎉🎉 WaveNet-SF: A hybrid network for retinal disease detection based on wavelet transform in spatial-frequency domain was accepted by <span style="color:skyblue">Neural Networks</span> **(CCF B)**
+- *2025.06*: &nbsp;🎉🎉 VehicleMAE: View-asymmetry Mutual Learning for Vehicle Re-identification Pre-training via Masked AutoEncoders was accepted by <span style="color:skyblue">ICCV 2025</span> **(CCF A)**
+- *2025.04*: &nbsp;🎉🎉 EyeTransGAN: End-to-End Generation of Corneal Fluorescein Staining Images from Anterior Segment Photography with Unsupervised Semantic Consistency was accepted by <span style="color:skyblue">IJCNN 2025</span> **(CCF C)**
 
 <!--# 📝 Publications 
 
