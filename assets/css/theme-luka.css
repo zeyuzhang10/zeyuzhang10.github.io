@@ -28,6 +28,9 @@ body.theme-luka *::after {
   --luka-social-bg: #ffffff;
   --luka-social-text: #8b7355;
   --luka-footer-border: rgba(194, 113, 79, 0.15);
+  --luka-serif: "Newsreader", "Noto Serif SC", "Songti SC", STSong, Georgia, serif;
+  --luka-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --luka-mono: "Ubuntu Mono", "SFMono-Regular", Consolas, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -71,9 +74,10 @@ body.theme-luka *::after {
 body.theme-luka {
   background: var(--luka-bg);
   color: var(--luka-text);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  line-height: 1.65;
+  font-family: var(--luka-serif);
+  font-size: 17px;
+  font-optical-sizing: auto;
+  line-height: 1.7;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -182,7 +186,8 @@ body.theme-luka .image.avatar img {
 body.theme-luka .site-name {
   margin: 0 0 8px;
   color: var(--luka-text);
-  font-size: 28px;
+  font-size: 32px;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -190,7 +195,7 @@ body.theme-luka .site-email {
   margin: 0 0 24px;
   color: var(--luka-secondary);
   font-size: 13px;
-  font-family: "Ubuntu Mono", "SFMono-Regular", monospace;
+  font-family: var(--luka-mono);
   word-break: break-all;
 }
 
@@ -269,8 +274,9 @@ body.theme-luka .section-title {
   padding-bottom: 10px;
   border-bottom: 2px solid var(--luka-accent);
   color: var(--luka-accent);
-  font-size: 19px;
+  font-size: 25px;
   font-weight: 600;
+  letter-spacing: -0.015em;
 }
 
 body.theme-luka .section-body p {
@@ -337,7 +343,7 @@ body.theme-luka .experience-content p {
 }
 
 body.theme-luka .exp-title {
-  font-size: 15px;
+  font-size: 17px;
   color: var(--luka-text);
 }
 
@@ -372,8 +378,9 @@ body.theme-luka .publications ol.bibliography li {
 body.theme-luka .pub-content .title {
   margin-bottom: 4px;
   color: var(--luka-text);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
+  line-height: 1.45;
 }
 
 body.theme-luka .pub-content .author {
@@ -413,7 +420,7 @@ body.theme-luka .award-icon {
 
 body.theme-luka .award-text {
   color: var(--luka-text);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 body.theme-luka .site-footer {
@@ -490,7 +497,7 @@ body.theme-luka strong {
   }
 
   body.theme-luka .site-name {
-    font-size: 24px;
+    font-size: 29px;
   }
 
   body.theme-luka .experience-item {
@@ -514,7 +521,7 @@ body.theme-luka strong {
   }
 
   body.theme-luka .section-title {
-    font-size: 18px;
+    font-size: 23px;
   }
 
   body.theme-luka .project-card,
@@ -560,6 +567,7 @@ body.theme-luka .nav-brand {
   font-size: 18px;
   font-weight: 650;
   letter-spacing: -0.02em;
+  font-family: var(--luka-ui);
 }
 
 body.theme-luka .nav-actions,
@@ -580,6 +588,7 @@ body.theme-luka .nav-links a {
   color: var(--luka-secondary);
   font-size: 13px;
   font-weight: 500;
+  font-family: var(--luka-ui);
 }
 
 body.theme-luka .nav-links a:hover,
@@ -607,7 +616,7 @@ body.theme-luka .site-name-cn {
 body.theme-luka .profile-role {
   margin: 0 0 10px;
   color: var(--luka-text);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
 }
@@ -616,6 +625,7 @@ body.theme-luka .profile-location {
   margin: 0 0 9px;
   color: var(--luka-secondary);
   font-size: 13px;
+  font-family: var(--luka-ui);
 }
 
 body.theme-luka .site-email {
@@ -624,7 +634,7 @@ body.theme-luka .site-email {
 }
 
 body.theme-luka .social-icons a {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--luka-ui);
   font-size: 16px;
   font-weight: 700;
 }
@@ -649,6 +659,7 @@ body.theme-luka .focus-card-title {
   font-weight: 700;
   letter-spacing: 0.13em;
   text-transform: uppercase;
+  font-family: var(--luka-ui);
 }
 
 body.theme-luka .focus-tags,
@@ -667,6 +678,7 @@ body.theme-luka .pub-tags span {
   color: var(--luka-secondary);
   font-size: 11px;
   line-height: 1.3;
+  font-family: var(--luka-ui);
 }
 
 body.theme-luka section[id] {
@@ -680,11 +692,13 @@ body.theme-luka .eyebrow {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  font-family: var(--luka-ui);
 }
 
 body.theme-luka .about-copy {
   max-width: 700px;
-  font-size: 17px;
+  font-size: 19px;
+  line-height: 1.72;
 }
 
 body.theme-luka .news-list {
@@ -702,7 +716,7 @@ body.theme-luka .news-item {
 body.theme-luka .news-item time,
 body.theme-luka .award-item time {
   color: var(--luka-accent);
-  font-family: "Ubuntu Mono", "SFMono-Regular", monospace;
+  font-family: var(--luka-mono);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -710,8 +724,8 @@ body.theme-luka .award-item time {
 
 body.theme-luka .news-item p {
   margin: 0;
-  font-size: 14px;
-  line-height: 1.65;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 body.theme-luka .publications ol.bibliography li {
@@ -732,6 +746,7 @@ body.theme-luka .section-note {
   margin-top: 19px;
   color: var(--luka-secondary);
   font-size: 13px;
+  font-family: var(--luka-ui);
 }
 
 body.theme-luka .education-list {
@@ -753,6 +768,12 @@ body.theme-luka .institution-mark {
   font-weight: 750;
   letter-spacing: 0.04em;
   box-shadow: 0 4px 12px var(--luka-shadow);
+  font-family: var(--luka-ui);
+}
+
+body.theme-luka .exp-period,
+body.theme-luka .template-credit {
+  font-family: var(--luka-ui);
 }
 
 body.theme-luka .awards-grid {
@@ -777,6 +798,7 @@ body.theme-luka .award-text {
 body.theme-luka .award-text span {
   color: var(--luka-secondary);
   font-size: 12px;
+  font-family: var(--luka-ui);
 }
 
 @supports not (color: color-mix(in srgb, black, white)) {
@@ -812,7 +834,7 @@ body.theme-luka .award-text span {
   }
 
   body.theme-luka .about-copy {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
