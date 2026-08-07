@@ -41,8 +41,8 @@ body.theme-luka *::after {
     --luka-secondary: #9b9488;
     --luka-border: rgba(226, 138, 103, 0.2);
     --luka-shadow: rgba(0, 0, 0, 0.3);
-    --luka-social-bg: #22211e;
-    --luka-social-text: #d1cec7;
+    --luka-social-bg: #d97757;
+    --luka-social-text: #241c18;
     --luka-footer-border: rgba(226, 138, 103, 0.15);
   }
 }
@@ -54,8 +54,8 @@ body.theme-luka *::after {
   --luka-secondary: #9b9488;
   --luka-border: rgba(226, 138, 103, 0.2);
   --luka-shadow: rgba(0, 0, 0, 0.3);
-  --luka-social-bg: #22211e;
-  --luka-social-text: #d1cec7;
+  --luka-social-bg: #d97757;
+  --luka-social-text: #241c18;
   --luka-footer-border: rgba(226, 138, 103, 0.15);
 }
 
@@ -771,6 +771,43 @@ body.theme-luka .institution-mark {
   letter-spacing: 0.04em;
   box-shadow: 0 4px 12px var(--luka-shadow);
   font-family: var(--luka-ui);
+}
+
+body.theme-luka .institution-mark img {
+  width: 42px;
+  height: 42px;
+  display: block;
+  object-fit: contain;
+}
+
+body.theme-luka .institution-mark img[src$="ustc-logo.jpg"] {
+  border-radius: 50%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) body.theme-luka .focus-tags span,
+  :root:not([data-theme="light"]) body.theme-luka .pub-tags span {
+    border-color: #e69a80;
+    background: #d97757;
+    color: #241c18;
+  }
+
+  :root:not([data-theme="light"]) body.theme-luka .institution-mark {
+    border-color: #e69a80;
+    background: #fff;
+  }
+}
+
+[data-theme="dark"] body.theme-luka .focus-tags span,
+[data-theme="dark"] body.theme-luka .pub-tags span {
+  border-color: #e69a80;
+  background: #d97757;
+  color: #241c18;
+}
+
+[data-theme="dark"] body.theme-luka .institution-mark {
+  border-color: #e69a80;
+  background: #fff;
 }
 
 body.theme-luka .exp-period,
