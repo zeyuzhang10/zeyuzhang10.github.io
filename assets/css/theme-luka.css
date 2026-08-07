@@ -1100,3 +1100,17 @@ body.theme-luka .institution-mark img {
     height: 56px;
   }
 }
+
+/* Unified metadata sizing and venue emphasis */
+body.theme-luka .activity-role,
+body.theme-luka .award-item time {
+  font-size: 14px;
+}
+
+body.theme-luka .news-item em {
+  color: var(--luka-accent);
+}
+
+body.theme-luka .pub-content .periodical em {
+  font-weight: 700;
+}
