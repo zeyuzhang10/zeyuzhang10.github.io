@@ -1114,3 +1114,8 @@ body.theme-luka .news-item em {
 body.theme-luka .pub-content .periodical em {
   font-weight: 700;
 }
+
+/* Bold News acceptance statements */
+body.theme-luka .news-item p {
+  font-weight: 700;
+}
