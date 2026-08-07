@@ -1119,3 +1119,44 @@ body.theme-luka .pub-content .periodical em {
 body.theme-luka .news-item p {
   font-weight: 700;
 }
+
+/* Publication flowchart layout */
+body.theme-luka .pub-content-with-figure {
+  display: grid;
+  grid-template-columns: minmax(220px, 38%) minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+body.theme-luka .pub-figure {
+  margin: 0;
+  min-width: 0;
+}
+
+body.theme-luka .pub-figure img {
+  width: 100%;
+  max-height: 220px;
+  display: block;
+  border: 1px solid var(--luka-border);
+  border-radius: 12px;
+  background: #fff;
+  object-fit: contain;
+  box-shadow: 0 4px 14px var(--luka-shadow);
+}
+
+body.theme-luka .pub-details {
+  min-width: 0;
+}
+
+@media (max-width: 760px) {
+  body.theme-luka .pub-content-with-figure {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  body.theme-luka .pub-figure img {
+    width: min(100%, 520px);
+    max-height: none;
+  }
+}
+
