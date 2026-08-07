@@ -1160,3 +1160,20 @@ body.theme-luka .pub-details {
   }
 }
 
+/* Use one page scrollbar for the sidebar and main content */
+@media (min-width: 1081px) {
+  body.theme-luka .sidebar {
+    position: sticky;
+    top: 60px;
+    left: auto;
+    height: max-content;
+    max-height: none;
+    overflow: visible;
+    align-self: flex-start;
+  }
+
+  body.theme-luka .content {
+    margin-left: 0;
+  }
+}
+
