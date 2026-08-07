@@ -1042,3 +1042,8 @@ body.theme-luka .activity-venue {
     gap: 5px;
   }
 }
+
+/* Slightly larger News dates */
+body.theme-luka .news-item time {
+  font-size: 14px;
+}
