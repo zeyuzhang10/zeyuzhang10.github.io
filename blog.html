@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog · Zeyu Zhang</title>
+  <meta name="description" content="Research notes and technical writing by Zeyu Zhang.">
+  <meta name="theme-color" content="#faf9f7">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-lightning-clean.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/font_sans_serif.css">
+  <link rel="stylesheet" href="assets/css/theme-luka.css">
+  <link rel="stylesheet" href="assets/css/blog.css">
+</head>
+<body class="theme-luka blog-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="top-nav" aria-label="Primary navigation">
+    <div class="nav-container">
+      <a class="nav-brand" href="index.html#top" aria-label="Zeyu Zhang — home">Zeyu Zhang</a>
+      <div class="nav-actions">
+        <div class="nav-links" aria-label="Page sections">
+          <a href="index.html#about">About</a>
+          <a href="index.html#publications">Publications</a>
+          <a href="index.html#activities">Activities</a>
+          <a class="active" href="blog.html" aria-current="page">Blog</a>
+        </div>
+        <button id="themeToggle" class="theme-toggle" type="button" title="Switch color theme" aria-label="Switch color theme">
+          <span class="theme-icon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="blog-main" id="main-content">
+    <header class="blog-hero">
+      <p class="blog-motto"><span>BLOG AT DAWN,</span><span>BLOG AT DUSK.</span></p>
+    </header>
+
+    <section id="blogListPanel" aria-labelledby="blogHeading">
+      <div class="blog-heading-row">
+        <h1 id="blogHeading">Blog Notes</h1>
+        <button class="blog-text-button" id="newPostButton" type="button">
+          <i class="fa-regular fa-pen-to-square" aria-hidden="true"></i>
+          New post
+        </button>
+      </div>
+
+      <div class="blog-post-list" id="blogPostList">
+        <div id="localPosts" aria-live="polite"></div>
+
+        <article class="blog-entry">
+          <time datetime="2026-08-04">2026.8.4</time>
+          <div class="blog-entry-content">
+            <h2>Building a Self-Evolving Clinical Reasoning Pipeline</h2>
+            <p>Design notes on skill repositories, preference optimization, and reliable radiology report generation.</p>
+            <div class="blog-tags"><span>Clinical AI</span><span>Reasoning</span></div>
+          </div>
+        </article>
+
+        <article class="blog-entry">
+          <time datetime="2026-07-26">2026.7.26</time>
+          <div class="blog-entry-content">
+            <div class="blog-entry-title-row">
+              <h2>Notes on Multimodal Agent Memory</h2>
+              <span class="blog-private"><i class="fa-solid fa-lock" aria-hidden="true"></i>Private</span>
+            </div>
+            <p>Early experiments and unpublished observations for an upcoming project.</p>
+            <div class="blog-tags"><span>Agents</span><span>Private notes</span></div>
+          </div>
+        </article>
+
+        <article class="blog-entry">
+          <time datetime="2026-06-12">2026.6.12</time>
+          <div class="blog-entry-content">
+            <h2>A Practical Guide to Vehicle Re-ID Pre-training</h2>
+            <p>A concise walkthrough of masked autoencoders, view asymmetry, and representation learning.</p>
+            <div class="blog-tags"><span>Computer Vision</span><span>Tutorial</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="blogEditorPanel" aria-labelledby="editorHeading" hidden>
+      <button class="blog-text-button blog-back-button" id="backToPostsButton" type="button">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        Back to posts
+      </button>
+
+      <div class="blog-heading-row editor-heading-row">
+        <h1 id="editorHeading">New Blog Post</h1>
+        <time id="submissionDate"></time>
+      </div>
+
+      <p class="blog-storage-note">Posts submitted here are saved only in this browser.</p>
+      <p class="blog-status" id="blogStatus" role="status" hidden></p>
+
+      <form id="blogForm">
+        <label class="blog-field" for="postTitle">
+          <span>Title</span>
+          <input id="postTitle" name="title" required autocomplete="off">
+        </label>
+
+        <label class="blog-field" for="postVisibility">
+          <span>Visibility</span>
+          <select id="postVisibility" name="visibility">
+            <option value="public">Public</option>
+            <option value="private">Private — only visible in this browser</option>
+          </select>
+        </label>
+
+        <label class="blog-field" for="postMarkdown">
+          <span>Markdown</span>
+          <textarea id="postMarkdown" name="markdown" required spellcheck="true" placeholder="## Heading&#10;&#10;Write your post in **Markdown**."></textarea>
+        </label>
+
+        <div class="blog-form-actions">
+          <button class="blog-text-button" id="saveDraftButton" type="button">Save draft</button>
+          <button class="blog-submit-button" type="submit">Publish Markdown</button>
+        </div>
+      </form>
+
+      <aside class="blog-preview" aria-labelledby="previewHeading">
+        <div class="blog-preview-header">
+          <h2 id="previewHeading">Preview</h2>
+          <span id="previewVisibility"><i class="fa-solid fa-globe" aria-hidden="true"></i>Public</span>
+        </div>
+        <article id="markdownPreview" class="markdown-body">
+          <h2>Untitled</h2>
+          <p>Your Markdown preview will appear here.</p>
+        </article>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="blog-footer">&copy; 2026 Zeyu Zhang. All rights reserved.</footer>
+  <script src="assets/js/blog.js"></script>
+</body>
+</html>
+

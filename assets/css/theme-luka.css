@@ -1207,3 +1207,44 @@ body.theme-luka .pub-details {
   }
 }
 
+
+
+/* Serif navigation with animated orange underline */
+body.theme-luka .nav-links a {
+  position: relative;
+  padding: 19px 0 17px;
+  color: var(--luka-secondary);
+  font-family: var(--luka-serif);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  transition: color 0.18s ease;
+}
+
+body.theme-luka .nav-links a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 9px;
+  left: 0;
+  height: 2px;
+  background: var(--luka-accent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.18s ease;
+}
+
+body.theme-luka .nav-links a:hover,
+body.theme-luka .nav-links a:focus-visible,
+body.theme-luka .nav-links a.active,
+body.theme-luka .nav-links a[aria-current="page"] {
+  color: var(--luka-accent);
+  filter: none;
+}
+
+body.theme-luka .nav-links a:hover::after,
+body.theme-luka .nav-links a:focus-visible::after,
+body.theme-luka .nav-links a.active::after,
+body.theme-luka .nav-links a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
