@@ -950,6 +950,21 @@ body.theme-luka .visitor-map canvas {
   max-width: 100%;
 }
 
+/* Keep the third-party map and its absolute visitor markers in one coordinate system. */
+body.theme-luka .visitor-map > span {
+  position: relative !important;
+  width: 240px !important;
+  height: 120px !important;
+  margin-right: 0 !important;
+  display: block !important;
+}
+
+body.theme-luka .visitor-map > span > img,
+body.theme-luka .visitor-map > span > span {
+  top: 0 !important;
+  left: 0 !important;
+}
+
 body.theme-luka .visitor-map-credit {
   display: inline-block;
   margin-top: 7px;
@@ -1058,7 +1073,10 @@ body.theme-luka .profile-location {
 }
 
 body.theme-luka .site-email {
-  font-size: 14px;
+  font-family: var(--luka-ui);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
 body.theme-luka .institution-mark {
@@ -1074,6 +1092,13 @@ body.theme-luka .institution-mark img {
   width: 64px;
   height: 64px;
 }
+
+body.theme-luka .institution-logo-ustc {
+  clip-path: circle(38% at 50% 50%);
+  transform: scale(1.32);
+  transform-origin: center;
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) body.theme-luka .institution-mark {
@@ -1118,6 +1143,10 @@ body.theme-luka .pub-content .periodical em {
 /* Bold News acceptance statements */
 body.theme-luka .news-item p {
   font-weight: 700;
+}
+
+body.theme-luka .news-item .acceptance-copy {
+  font-weight: 400;
 }
 
 /* Publication flowchart layout */
@@ -1170,6 +1199,7 @@ body.theme-luka .pub-details {
     max-height: none;
     overflow: visible;
     align-self: flex-start;
+    padding-top: 120px;
   }
 
   body.theme-luka .content {
