@@ -1047,3 +1047,56 @@ body.theme-luka .activity-venue {
 body.theme-luka .news-item time {
   font-size: 14px;
 }
+
+/* Larger unframed university logos and profile metadata */
+body.theme-luka .site-name-cn {
+  font-size: 17px;
+}
+
+body.theme-luka .profile-location {
+  font-size: 15px;
+}
+
+body.theme-luka .site-email {
+  font-size: 14px;
+}
+
+body.theme-luka .institution-mark {
+  width: 68px;
+  height: 68px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+body.theme-luka .institution-mark img {
+  width: 64px;
+  height: 64px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) body.theme-luka .institution-mark {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+[data-theme="dark"] body.theme-luka .institution-mark {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+@media (max-width: 640px) {
+  body.theme-luka .institution-mark {
+    width: 60px;
+    height: 60px;
+  }
+
+  body.theme-luka .institution-mark img {
+    width: 56px;
+    height: 56px;
+  }
+}
