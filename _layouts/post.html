@@ -1,0 +1,27 @@
+---
+layout: blog
+---
+
+<header class="blog-hero">
+  <p class="blog-motto"><span>BLOG AT DAWN,</span><span>BLOG AT DUSK.</span></p>
+</header>
+
+<section id="blogDetailPanel" aria-labelledby="post-title">
+  <a class="blog-text-button blog-back-button" href="{{ '/blog.html' | relative_url }}">
+    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+    Back to posts
+  </a>
+
+  <article class="blog-detail">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%-m.%-d" }}</time>
+    <h1 id="post-title">{{ page.title | escape }}</h1>
+    {% if page.tags and page.tags != empty %}
+      <div class="blog-tags" aria-label="Post tags">
+        {% for tag in page.tags %}<span>{{ tag }}</span>{% endfor %}
+      </div>
+    {% endif %}
+    <div class="markdown-body">
+      {{ content }}
+    </div>
+  </article>
+</section>
