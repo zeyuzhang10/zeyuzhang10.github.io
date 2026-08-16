@@ -49,10 +49,9 @@
         </button>
       </div>
 
-      <div class="blog-post-list" id="blogPostList">
-        <div id="localPosts" aria-live="polite"></div>
+      <div class="blog-post-list" id="blogPostList" aria-live="polite">
 
-        <article class="blog-entry">
+        <article class="blog-entry" data-post-id="clinical-reasoning-pipeline">
           <time datetime="2026-08-04">2026.8.4</time>
           <div class="blog-entry-content">
             <h2>Building a Self-Evolving Clinical Reasoning Pipeline</h2>
@@ -61,19 +60,16 @@
           </div>
         </article>
 
-        <article class="blog-entry">
+        <article class="blog-entry" data-post-id="multimodal-agent-memory">
           <time datetime="2026-07-26">2026.7.26</time>
           <div class="blog-entry-content">
-            <div class="blog-entry-title-row">
-              <h2>Notes on Multimodal Agent Memory</h2>
-              <span class="blog-private"><i class="fa-solid fa-lock" aria-hidden="true"></i>Private</span>
-            </div>
+            <h2>Notes on Multimodal Agent Memory</h2>
             <p>Early experiments and unpublished observations for an upcoming project.</p>
-            <div class="blog-tags"><span>Agents</span><span>Private notes</span></div>
+            <div class="blog-tags"><span>Agents</span><span>Memory</span></div>
           </div>
         </article>
 
-        <article class="blog-entry">
+        <article class="blog-entry" data-post-id="vehicle-reid-pretraining">
           <time datetime="2026-06-12">2026.6.12</time>
           <div class="blog-entry-content">
             <h2>A Practical Guide to Vehicle Re-ID Pre-training</h2>
@@ -82,6 +78,23 @@
           </div>
         </article>
       </div>
+    </section>
+
+    <section id="blogDetailPanel" aria-labelledby="detailHeading" hidden>
+      <button class="blog-text-button blog-back-button" id="backToPostsFromDetailButton" type="button">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        Back to posts
+      </button>
+      <article class="blog-detail">
+        <time id="detailDate"></time>
+        <h1 id="detailHeading"></h1>
+        <div class="blog-tags" id="detailTags"></div>
+        <div id="detailMarkdown" class="markdown-body"></div>
+        <div class="blog-detail-actions" id="detailActions">
+          <button class="blog-text-button" id="editPostButton" type="button"><i class="fa-regular fa-pen-to-square" aria-hidden="true"></i>Edit post</button>
+          <button class="blog-text-button blog-danger-button" id="deletePostButton" type="button"><i class="fa-regular fa-trash-can" aria-hidden="true"></i>Delete post</button>
+        </div>
+      </article>
     </section>
 
     <section id="blogEditorPanel" aria-labelledby="editorHeading" hidden>
@@ -95,7 +108,7 @@
         <time id="submissionDate"></time>
       </div>
 
-      <p class="blog-storage-note">Posts submitted here are saved only in this browser.</p>
+      <p class="blog-storage-note">Posts and edits made here are saved only in this browser.</p>
       <p class="blog-status" id="blogStatus" role="status" hidden></p>
 
       <form id="blogForm">
@@ -104,12 +117,12 @@
           <input id="postTitle" name="title" required autocomplete="off">
         </label>
 
-        <label class="blog-field" for="postVisibility">
-          <span>Visibility</span>
-          <select id="postVisibility" name="visibility">
-            <option value="public">Public</option>
-            <option value="private">Private — only visible in this browser</option>
-          </select>
+        <label class="blog-field" for="postTags">
+          <span>Tags <small>(start each tag with #)</small></span>
+          <div class="blog-tag-input">
+            <span aria-hidden="true">#</span>
+            <input id="postTags" name="tags" autocomplete="off" placeholder="research #notes #tutorial">
+          </div>
         </label>
 
         <label class="blog-field" for="postMarkdown">
@@ -119,14 +132,14 @@
 
         <div class="blog-form-actions">
           <button class="blog-text-button" id="saveDraftButton" type="button">Save draft</button>
-          <button class="blog-submit-button" type="submit">Publish Markdown</button>
+          <button class="blog-submit-button" id="submitPostButton" type="submit">Publish Markdown</button>
         </div>
       </form>
 
       <aside class="blog-preview" aria-labelledby="previewHeading">
         <div class="blog-preview-header">
           <h2 id="previewHeading">Preview</h2>
-          <span id="previewVisibility"><i class="fa-solid fa-globe" aria-hidden="true"></i>Public</span>
+          <div class="blog-tags" id="previewTags" aria-label="Post tags"></div>
         </div>
         <article id="markdownPreview" class="markdown-body">
           <h2>Untitled</h2>

@@ -913,34 +913,22 @@ body.theme-luka .pub-tags span {
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-body.theme-luka .visitor-map-card {
-  width: 240px;
-  margin: 22px auto 0;
-  padding: 13px 0 11px;
-  overflow: hidden;
-  border: 1px solid color-mix(in srgb, var(--luka-accent) 72%, transparent);
-  border-radius: 15px;
+body.theme-luka .visitor-card {
+  box-sizing: border-box;
+  overflow: visible;
   background: color-mix(in srgb, var(--luka-accent) 5%, var(--luka-bg));
   box-shadow: 0 5px 18px var(--luka-shadow);
-  text-align: center;
-}
-
-body.theme-luka .visitor-map-title {
-  margin: 0 14px 9px;
-  color: var(--luka-accent);
   font-family: var(--luka-ui);
-  font-size: 10px;
-  font-weight: 750;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 body.theme-luka .visitor-map {
-  width: 240px;
-  min-height: 120px;
+  position: relative;
+  z-index: 1;
+  width: 208px;
+  min-height: 104px;
   display: grid;
   place-items: center;
-  overflow: hidden;
+  overflow: visible;
 }
 
 body.theme-luka .visitor-map img,
@@ -953,8 +941,9 @@ body.theme-luka .visitor-map canvas {
 /* Keep the third-party map and its absolute visitor markers in one coordinate system. */
 body.theme-luka .visitor-map > span {
   position: relative !important;
-  width: 240px !important;
-  height: 120px !important;
+  overflow: visible !important;
+  width: 208px !important;
+  height: 104px !important;
   margin-right: 0 !important;
   display: block !important;
 }
@@ -967,7 +956,7 @@ body.theme-luka .visitor-map > span > span {
 
 body.theme-luka .visitor-map-credit {
   display: inline-block;
-  margin-top: 7px;
+  margin-top: 9px;
   color: var(--luka-secondary);
   font-family: var(--luka-ui);
   font-size: 9px;
@@ -1046,7 +1035,7 @@ body.theme-luka .activity-venue {
   color: #241c18 !important;
 }
 
-[data-theme="dark"] body.theme-luka .visitor-map-card {
+[data-theme="dark"] body.theme-luka .visitor-card {
   background: #151412;
   border-color: #d97757;
 }
