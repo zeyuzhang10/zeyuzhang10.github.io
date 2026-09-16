@@ -49,7 +49,9 @@ AcadHomepage
     1. `author`: 主页作者信息，包括其他网页、Email、所在城市、大学等。
     1. `google_scholar_stats_use_cdn`: 使用CDN读取存储于`https://raw.githubusercontent.com/`的google scholar引用统计数据，防止中国大陆地区被墙无法访问的情况。但是CDN有缓存，因此`google_scholar_stats_use_cdn : True`时，引用数据更新会有延迟。
     1. 更多的配置信息在注释中有详细描述。
-1. 将你的主页内容添加到 [_pages/about.md](../_pages/about.md).
+1. 编辑 [index.html](../index.html) 修改首页的个人信息、简介、News、论文、教育经历、学术活动和获奖信息。这些内容直接写在 HTML 中，修改 `_config.yml` 不会同步更新这些首页内容。
+1. 在 `_posts/` 中新增 Markdown 文件发布博客，文件名使用 `YYYY-MM-DD-slug.md`。可以复制已有文章，修改顶部的 `layout: post`、`title`、`date`、`tags`、`excerpt`，并在第二个 `---` 后编写正文。[博客列表页](../blog.html)会自动收录已发布的文章。
+1. 图片放入 `images/`，在 Markdown 中通过 `![图片说明](/images/filename.png)` 引用。
 1. 你的主页将会被部署到`https://USERNAME.github.io`.
 
 ## 本地调试

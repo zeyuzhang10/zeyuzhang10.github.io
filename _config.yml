@@ -62,7 +62,6 @@ author:
 # Reading Files
 include:
   - .htaccess
-  - _pages
   - files
 exclude:
   - docs
@@ -119,7 +118,7 @@ kramdown:
 
 # Defaults
 defaults:
-  # _pages
+  # Page defaults
   - scope:
       path: ""
       type: pages
